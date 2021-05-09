@@ -41,3 +41,11 @@ Whenever you join the server, you will immediately be joined to a lobby with an 
 
 Assuming you have PurePerms installed and the server is online, run this command in console or in game:
 `/unsetuperm PLAYERNAME lobby.tp`
+Note: Doing this also disables your ability to run `/lobby`.
+
+Now you will be immune to the system!
+
+To add yourself back to the system, assuming you have PurePerms installed and the server is online, run this command in console or in game:
+`/setupeem PLAYERNAME lobby.tp`
+
+## Made with <3 for Dreampixel
