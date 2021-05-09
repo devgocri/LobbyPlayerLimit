@@ -1,0 +1,16 @@
+name: LobbyPlayerLimit
+author: BestCodrEver
+main: BestCodrEver\LobbyPlayerLimit\Main
+version: 1.0.0
+api: 3.19.1
+
+commands:
+ lobby:
+  description: "Teleport to a lobby"
+  usage: /lobby
+  permission: lobby.tp
+
+permissions:
+ lobby.tp:
+  description: "Allows a player to teleport to lobby"
+  default: true 
