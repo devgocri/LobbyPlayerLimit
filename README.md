@@ -49,3 +49,4 @@ To add yourself back to the system, assuming you have PurePerms installed and th
 `/setupeem PLAYERNAME lobby.tp`
 
 ## Made with <3 for Dreampixel
+This took so long, but it was worth it. I hope my dedication to this server will help it grow and inspire others to spread kindness like me too!
