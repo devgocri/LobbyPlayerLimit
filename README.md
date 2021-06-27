@@ -1,6 +1,8 @@
 # LobbyPlayerLimit
 A plugin which adds an automatic player transfer throughout multiple lobbies when you do /lobby
 
+NOTE: This plugin requires PurePerms
+
 ## How to setup?
 Drop the plugin into your server and start-and-stop it.
 Navigate to your `plugin_data` folder and find `lobbies.yml`. 
