@@ -9,10 +9,7 @@
  |____/ \___||___/\__|\_____\___/ \__,_|_|  |______\_/ \___|_|   
 
 This plugin was made by BestCodrEver.
-if you use/copy any part of this code, please credit me.
-I'm fine with you learning something using this or using this in your code, but crediting is just common sense.
- 
-Made for Dreampixel with <3
+Discord: FaithlessMC#7013
 */
 
 namespace BestCodrEver\LobbyPlayerLimit;
@@ -54,7 +51,7 @@ class Main extends PluginBase implements Listener{
 
     public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args):bool {
         if ($cmd->getName() !== 'lobby') return true;
-        if (!$sender->hasPermission("lobby.tp")) return true;
+        if (!$sender->hasPermission("lobbyplayerlimit.lobby")) return true;
         if (!$sender instanceof Player){
             $sender->sendMessage(TextFormat::RED . "This command must be run ingame");
             return true;
