@@ -46,6 +46,9 @@ Now you will be immune to the system!
 To add yourself back to the system, assuming you have PurePerms installed and the server is online, run this command in console or in game:
 `/setupeem PLAYERNAME lobbyplayerlimit.lobby`
 
+## Something broken?
+Create an issue through GitHub [here](https://github.com/BestCodrEver/LobbyPlayerLimit/issues/new)
+
 ## Credits and Special Mentions
 - BestCodrEver (That's me!)
 - Pumpedpixel (This plugin was originally made for him)
