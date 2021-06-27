@@ -36,13 +36,13 @@ Now, restart the server and you're all done!
 Whenever you join the server, you will immediately be joined to a lobby with an amount of players less than 30. If you want to disable this, you have to remove the `lobby.tp` permission from yourself. 
 
 Assuming you have PurePerms installed and the server is online, run this command in console or in game:
-`/unsetuperm PLAYERNAME lobby.tp`
+`/unsetuperm PLAYERNAME lobbyplayerlimit.lobby`
 Note: Doing this also disables your ability to run `/lobby`.
 
 Now you will be immune to the system!
 
 To add yourself back to the system, assuming you have PurePerms installed and the server is online, run this command in console or in game:
-`/setupeem PLAYERNAME lobby.tp`
+`/setupeem PLAYERNAME lobbyplayerlimit.lobby`
 
 ## Credits and Special Mentions
 - BestCodrEver (That's me!)
