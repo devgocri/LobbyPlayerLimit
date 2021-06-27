@@ -1,16 +1,12 @@
 # LobbyPlayerLimit
-Plugin for Dreampixel, adding a automatic player transfer with multiple lobbies
-
-By: [BestCodrEver](https://github.com/BestCodrEver) (Dev for DP)
+A plugin which adds an automatic player transfer throughout multiple lobbies when you do /lobby
 
 ## How to setup?
-Navigate to your `plugin_data` folder and find `lobbies.yml`. **MAKE SURE THE SERVER IS COMPLETELY TURNED OFF, DON'T EVEN START IT WITHOUT CONFIGURING THE YAML FILE!!!**
+Drop the plugin into your server and start-and-stop it.
+Navigate to your `plugin_data` folder and find `lobbies.yml`. 
 
 It will contain this:
 ```yaml
-#Another epic plugin made by BestCodrEver
-#For Dreampixel
-#Luv dem pixels boiii
 
 #MAKE SURE ALL FIELDS ARE FILLED!!! IF NOT, THE PLUGIN WILL BREAK!!!
 
@@ -48,5 +44,7 @@ Now you will be immune to the system!
 To add yourself back to the system, assuming you have PurePerms installed and the server is online, run this command in console or in game:
 `/setupeem PLAYERNAME lobby.tp`
 
-## Made with <3 for Dreampixel
-This took so long, but it was worth it. I hope my dedication to this server will help it grow and inspire others to spread kindness like me too!
+## Credits and Special Mentions
+- BestCodrEver (That's me!)
+- Pumpedpixel (This plugin was originally made for him)
+- Everyone in the PMMP Discord (who helped me with my questions)
