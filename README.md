@@ -40,6 +40,8 @@ Now, replace `- "dummy1"` and `- "dummy1"` the names of the worlds of your lobbi
 
 Then, replace `fallback: "dummeh"` with `fallback: "YOUR FALLBACK LOBBY WORLD NAME HERE"`. 
 
+After that, replace `limit: 20` with `limit: AMOUNT OF PLAYERS PER LOBBY`
+
 Now, restart the server and you're all done!
 
 ## Make yourself immune to the system
