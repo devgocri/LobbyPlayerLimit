@@ -3,6 +3,11 @@
 #Lobby - "world"
 #Fallback - "fallback"
 #Player Limit - 20
+#Lobby full message: "Sorry, but all of our lobbies are full. Don't worry, you have been teleported to a fallback lobby, and we'll keep trying to send you to a lobby."
+
+#Lobby full message
+#Enter the message that is sent to the player when a lobby is full
+lobbyfullmsg: "Sorry, but all of our lobbies are full. Don't worry, you have been teleported to a fallback lobby, and we'll keep trying to send you to a lobby."
 
 #Player Limit
 #Enter the number of players the lobbies need to be limited to.
