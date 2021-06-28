@@ -67,7 +67,7 @@ class Main extends PluginBase implements Listener{
             }
         }
         $sender->teleport($this->getServer()->getLevelByName($fallback)->getSafeSpawn());
-        $sender->sendMessage(TextFormat::LIGHT_PURPLE . TextFormat::BOLD . "DP: " . TextFormat::RED . "Sorry but all of our lobbies are full, and you have been transferred onto a fallback lobby. Don't worry, we will still try to teleport to a lobby every 30 seconds.");
+        $sender->sendMessage($this->getMsg());
         return true;
     }
 
@@ -81,5 +81,9 @@ class Main extends PluginBase implements Listener{
   
    public function getLimit(): int{
         return (int) $this->lobbyConfig->getNested("limit", 20);
+   }
+   
+   public function getMsg(): string{
+        return (string) $this->lobbyConfig->getNested("lobbyfullmsg", "Sorry, but all of our lobbies are full. Don't worry, you have been teleported to a fallback lobby, and we'll keep trying to send you to a lobby.");
    }
 }
