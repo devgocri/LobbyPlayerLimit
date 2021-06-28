@@ -1,4 +1,12 @@
-#MAKE SURE ALL FIELDS ARE FILLED!!! IF NOT, THE PLUGIN WILL BREAK!!!
+#If fields are not filled default values will be used.
+#Default:
+#Lobby - "world"
+#Fallback - "fallback"
+#Player Limit - 20
+
+#Player Limit
+#Enter the number of players the lobbies need to be limited to.
+limit: 20
 
 #Lobbies
 #Enter a "- " followed the names of the lobbies inside "". This is case sensitive!
