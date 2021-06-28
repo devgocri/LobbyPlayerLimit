@@ -3,7 +3,6 @@ author: BestCodrEver
 main: BestCodrEver\LobbyPlayerLimit\Main
 version: 1.0
 api: 3.0.0
-depend: PurePerms
 
 commands:
  lobby:
