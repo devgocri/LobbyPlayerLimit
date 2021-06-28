@@ -64,7 +64,7 @@ Note: Doing this also disables your ability to run `/lobby`.
 Now you will be immune to the system!
 
 To add yourself back to the system, assuming you have PurePerms installed and the server is online, run this command in console or in game:
-`/setupeem PLAYERNAME lobbyplayerlimit.lobby`
+`/setuperm PLAYERNAME lobbyplayerlimit.lobby`
 
 ## Permissions
 
