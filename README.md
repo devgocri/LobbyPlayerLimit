@@ -1,8 +1,6 @@
 # LobbyPlayerLimit
 A plugin which adds an automatic player transfer throughout multiple lobbies when you do /lobby
 
-NOTE: This plugin requires PurePerms
-
 ## How to setup?
 Drop the plugin into your server and start-and-stop it.
 Navigate to your `plugin_data` folder and find `lobbies.yml`. 
@@ -45,7 +43,7 @@ After that, replace `limit: 20` with `limit: AMOUNT OF PLAYERS PER LOBBY`
 Now, restart the server and you're all done!
 
 ## Make yourself immune to the system
-Whenever you join the server, you will immediately be joined to a lobby with an amount of players less than 30. If you want to disable this, you have to remove the `lobby.tp` permission from yourself. 
+Whenever you join the server, you will immediately be joined to a lobby with an amount of players less than your limit. If you want to disable this, you have to remove the `lobby.tp` permission from yourself. 
 
 Assuming you have PurePerms installed and the server is online, run this command in console or in game:
 `/unsetuperm PLAYERNAME lobbyplayerlimit.lobby`
