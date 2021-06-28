@@ -13,6 +13,11 @@ It will contain this:
 #Lobby - "world"
 #Fallback - "fallback"
 #Player Limit - 20
+#Lobby full message: "Sorry, but all of our lobbies are full. Don't worry, you have been teleported to a fallback lobby, and we'll keep trying to send you to a lobby."
+
+#Lobby full message
+#Enter the message that is sent to the player when a lobby is full
+lobbyfullmsg: "Sorry, but all of our lobbies are full. Don't worry, you have been teleported to a fallback lobby, and we'll keep trying to send you to a lobby."
 
 #Player Limit
 #Enter the number of players the lobbies need to be limited to.
@@ -39,6 +44,8 @@ Now, replace `- "dummy1"` and `- "dummy1"` the names of the worlds of your lobbi
 Then, replace `fallback: "dummeh"` with `fallback: "YOUR FALLBACK LOBBY WORLD NAME HERE"`. 
 
 After that, replace `limit: 20` with `limit: AMOUNT OF PLAYERS PER LOBBY`
+
+Replace `lobbyfullmsg: "Sorry, but all of our lobbies are full. Don't worry, you have been teleported to a fallback lobby, and we'll keep trying to send you to a lobby."` with `lobbyfullmsg: YOUR LOBBY FULL MESSAGE HERE` if you are not happy with the default.
 
 Now, restart the server and you're all done!
 
