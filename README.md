@@ -10,7 +10,15 @@ Navigate to your `plugin_data` folder and find `lobbies.yml`.
 It will contain this:
 ```yaml
 
-#MAKE SURE ALL FIELDS ARE FILLED!!! IF NOT, THE PLUGIN WILL BREAK!!!
+#If fields are not filled default values will be used.
+#Default:
+#Lobby - "world"
+#Fallback - "fallback"
+#Player Limit - 20
+
+#Player Limit
+#Enter the number of players the lobbies need to be limited to.
+limit: 20
 
 #Lobbies
 #Enter a "- " followed the names of the lobbies inside "". This is case sensitive!
@@ -26,7 +34,7 @@ lobbies:
 #Enter the name of the fallback lobby inside "". This is case sensitive!
 #Example:
 # fallback: "FallbackLobby1"
-fallback: "dummeh"
+fallback: "Dummeh"
 ```
 Now, replace `- "dummy1"` and `- "dummy1"` the names of the worlds of your lobbies. You can add as many as you want as long as they follow the `- "Example"` format. Make sure they have the same amount of indentation!
 
