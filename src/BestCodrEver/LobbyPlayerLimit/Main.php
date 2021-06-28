@@ -61,7 +61,7 @@ class Main extends PluginBase implements Listener{
         $this->getServer()->loadLevel($fallback);
         foreach ($lobbies as $lobby) {
             $this->getServer()->loadLevel($lobby);
-            if (count($this->getServer()->getLevelByName($lobby)->getPlayers()) < 30){
+            if (count($this->getServer()->getLevelByName($lobby)->getPlayers()) < $this->getLimit()){
                 $sender->teleport($this->getServer()->getLevelByName($lobby)->getSafeSpawn());
                 return true;
             }
@@ -72,10 +72,14 @@ class Main extends PluginBase implements Listener{
     }
 
     public function getLobbies(): array{
-        return (array) $this->lobbyConfig->getNested("lobbies", []);
+        return (array) $this->lobbyConfig->getNested("lobbies", ["world"]);
     }
 
     public function getFallback(): string{
-        return (string) $this->lobbyConfig->getNested("fallback");
+        return (string) $this->lobbyConfig->getNested("fallback", "fallback");
     }
+  
+   public function getLimit(): int{
+        return (int) $this->lobbyConfig->getNested("limit", 20);
+   }
 }
