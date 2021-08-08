@@ -2,7 +2,8 @@
 
 [![](https://poggit.pmmp.io/shield.state/LobbyPlayerLimit)](https://poggit.pmmp.io/p/LobbyPlayerLimit)
 [![](https://poggit.pmmp.io/shield.api/LobbyPlayerLimit)](https://poggit.pmmp.io/p/LobbyPlayerLimit)
-
+[![](https://poggit.pmmp.io/shield.dl.total/LobbyPlayerLimit)](https://poggit.pmmp.io/p/LobbyPlayerLimit)
+[![](https://poggit.pmmp.io/shield.dl/LobbyPlayerLimit)](https://poggit.pmmp.io/p/LobbyPlayerLimit)
 
 A plugin which adds an automatic player transfer throughout multiple lobbies when you do /lobby with a player limit for each lobby
 
