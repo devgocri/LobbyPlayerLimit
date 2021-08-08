@@ -5,5 +5,5 @@ branches:
 projects:
   LobbyPlayerLimit:
     path: ""
-    icon: "icon.jpg"
+    icon: "icon.png"
 ...
