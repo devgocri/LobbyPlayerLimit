@@ -11,7 +11,7 @@ A plugin which adds an automatic player transfer throughout multiple lobbies whe
 Updated setup notes can be found in the poggit page.
 
 ## Make yourself immune to the system
-Whenever you join the server, you will immediately be joined to a lobby with an amount of players less than your limit. If you want to disable this, you have to remove the `lobby.tp` permission from yourself. 
+Whenever you join the server, you will immediately be joined to a lobby with an amount of players less than your limit. If you want to disable this, you have to remove the `lobbyplayerlimit.lobby` permission from yourself. 
 
 Assuming you have PurePerms installed and the server is online, run this command in console or in game:
 `/unsetuperm PLAYERNAME lobbyplayerlimit.lobby`
