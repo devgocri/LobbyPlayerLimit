@@ -1,0 +1,24 @@
+#If values are invalid or missing, plugin will disable to prevent crashes.
+
+#Lobby full message
+#Enter the message that is sent to the player when a lobby is full
+lobbyfullmsg: 
+
+#Player Limit
+#Enter the number of players the lobbies need to be limited to.
+limit: 0
+
+#Lobbies
+#Enter a "- " followed the names of the lobbies inside "". This is case sensitive!
+#Example:
+# - "Lobby1"
+# - "Lobby2"
+lobbies:
+ - 
+
+#Fallback lobby
+#Players are teleported to a fallback lobby when all lobbies are full. They will be teleported to a lobby once that lobby has enough space.
+#Enter the name of the fallback lobby inside "". This is case sensitive!
+#Example:
+# fallback: "FallbackLobby1"
+fallback: 
