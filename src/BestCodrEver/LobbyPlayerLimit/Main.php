@@ -34,6 +34,10 @@ class Main extends PluginBase implements Listener{
       $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->saveResource("lobbies.yml");
         $this->lobbyConfig = new Config($this->getDataFolder() . "lobbies.yml", Config::YAML);
+        if ($this->getLimit() < 0 || is_null($this->getMsg()) || count($this->getLobbies()) === 0 || is_null($this->getFallback()) || Server::getInstance()->isLevelGenerated($this->getFallback())){
+          $this->error();
+        }
+        
         $this->getScheduler()->scheduleRepeatingTask(new ClosureTask(
             function(int $currentTick): void{
                 $this->getServer()->loadLevel($this->getFallback());
@@ -60,6 +64,9 @@ class Main extends PluginBase implements Listener{
         $fallback = $this->getFallback();
         $this->getServer()->loadLevel($fallback);
         foreach ($lobbies as $lobby) {
+          if(Server::getInstance()->isLevelGenerated($lobby)){
+            $this->error();
+          }
             $this->getServer()->loadLevel($lobby);
             if (count($this->getServer()->getLevelByName($lobby)->getPlayers()) < $this->getLimit()){
                 $sender->teleport($this->getServer()->getLevelByName($lobby)->getSafeSpawn());
@@ -70,20 +77,25 @@ class Main extends PluginBase implements Listener{
         $sender->sendMessage($this->getMsg());
         return true;
     }
-
-    public function getLobbies(): array{
-        return (array) $this->lobbyConfig->getNested("lobbies", ["world"]);
+    
+    public function error(){
+      $this->getLogger()->info("Your config file has invalid or missing information. Please correct it and restart the server.");
+      $this->getServer()->getPluginManager()->disablePlugin($this);
     }
 
-    public function getFallback(): string{
-        return (string) $this->lobbyConfig->getNested("fallback", "fallback");
+    public function getLobbies(){
+        return $this->lobbyConfig->getNested("lobbies", []);
+    }
+
+    public function getFallback(){
+        return $this->lobbyConfig->getNested("fallback", null);
     }
   
-   public function getLimit(): int{
-        return (int) $this->lobbyConfig->getNested("limit", 20);
+   public function getLimit(){
+        return $this->lobbyConfig->getNested("limit", 0);
    }
    
-   public function getMsg(): string{
-        return (string) $this->lobbyConfig->getNested("lobbyfullmsg", "Sorry, but all of our lobbies are full. Don't worry, you have been teleported to a fallback lobby, and we'll keep trying to send you to a lobby.");
+   public function getMsg(){
+        return $this->lobbyConfig->getNested("lobbyfullmsg", null);
    }
 }
