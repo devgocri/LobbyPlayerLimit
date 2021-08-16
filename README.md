@@ -5,10 +5,17 @@
 [![](https://poggit.pmmp.io/shield.dl.total/LobbyPlayerLimit)](https://poggit.pmmp.io/p/LobbyPlayerLimit)
 [![](https://poggit.pmmp.io/shield.dl/LobbyPlayerLimit)](https://poggit.pmmp.io/p/LobbyPlayerLimit)
 
-A plugin which adds an automatic player transfer throughout multiple lobbies when you do /lobby with a player limit for each lobby
+A plugin which adds an automatic player transfer throughout multiple lobbies when you do /lobby with a player limit for each lobby.
+
+If you didn’t know, a lobby is where people spawn and they can join minigames, teleport to places etc. It is the starting point of a server as players spawn there for the first time. It’s practically a hub :D
+
+## Download?
+
+- [Public Releases](https://poggit.pmmp.io/p/LobbyPlayerLimit)
+- [Developer Builds](https://poggit.pmmp.io/ci/BestCodrEver/LobbyPlayerLimit)
 
 ## How to setup?
-Updated setup notes can be found in the poggit page.
+You can find setup notes [here](https://poggit.pmmp.io/p/LobbyPlayerLimit#rdesc-section-how-to-setup).
 
 ## Make yourself immune to the system
 Whenever you join the server, you will immediately be joined to a lobby with an amount of players less than your limit. If you want to disable this, you have to remove the `lobbyplayerlimit.lobby` permission from yourself. 
