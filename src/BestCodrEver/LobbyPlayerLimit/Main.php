@@ -60,8 +60,9 @@ class Main extends PluginBase implements Listener{
         $fallback = $this->getFallback();
         $this->getServer()->loadLevel($fallback);
         foreach ($lobbies as $lobby) {
-          if(Server::getInstance()->isLevelGenerated($lobby)){
+          if(!Server::getInstance()->isLevelGenerated($lobby)){
             $this->error();
+            return true;
           }
             $this->getServer()->loadLevel($lobby);
             if (count($this->getServer()->getLevelByName($lobby)->getPlayers()) < $this->getLimit()){
