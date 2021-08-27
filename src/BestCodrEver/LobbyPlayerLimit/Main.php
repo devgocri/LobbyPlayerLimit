@@ -32,6 +32,7 @@ class Main extends PluginBase implements Listener{
         $this->lobbyConfig = new Config($this->getDataFolder() . "lobbies.yml", Config::YAML);
         if ($this->getLimit() < 0 || is_null($this->getMsg()) || count($this->getLobbies()) === 0 || is_null($this->getFallback()) || Server::getInstance()->isLevelGenerated($this->getFallback())){
           $this->error();
+          return;
         }
         
         $this->getScheduler()->scheduleRepeatingTask(new ClosureTask(
