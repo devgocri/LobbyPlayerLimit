@@ -14,18 +14,14 @@ Discord: FaithlessMC#7013
 
 namespace BestCodrEver\LobbyPlayerLimit;
 
+use pocketmine\scheduler\{TaskScheduler, ClosureTask};
+use pocketmine\command\{CommandSender, Command};
+use pocketmine\utils\{TextFormat, Config};
+use pocketmine\{Player, Server};
 use pocketmine\event\player\PlayerJoinEvent;
-use pocketmine\scheduler\TaskScheduler;
-use pocketmine\scheduler\ClosureTask;
-use pocketmine\command\CommandSender;
-use pocketmine\plugin\PluginBase;
-use pocketmine\utils\TextFormat;
-use pocketmine\command\Command;
 use pocketmine\event\Listener;
-use pocketmine\utils\Config;
+use pocketmine\plugin\PluginBase;
 use pocketmine\level\Level;
-use pocketmine\Player;
-use pocketmine\Server;
 
 
 class Main extends PluginBase implements Listener{
