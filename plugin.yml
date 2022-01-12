@@ -1,8 +1,8 @@
 name: LobbyPlayerLimit
 author: BestCodrEver
 main: BestCodrEver\LobbyPlayerLimit\Main
-version: 1.1.1
-api: 3.0.0
+version: 1.2
+api: 4.0.0
 
 commands:
  lobby:

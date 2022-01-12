@@ -14,30 +14,30 @@ Discord: FaithlessMC#7013
 
 namespace BestCodrEver\LobbyPlayerLimit;
 
-use pocketmine\scheduler\{TaskScheduler, ClosureTask};
+use pocketmine\scheduler\ClosureTask;
 use pocketmine\command\{CommandSender, Command};
 use pocketmine\utils\{TextFormat, Config};
-use pocketmine\{Player, Server};
+use pocketmine\player\Player;
+use pocketmine\Server;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\Listener;
 use pocketmine\plugin\PluginBase;
-use pocketmine\level\Level;
 
 class Main extends PluginBase implements Listener{
   public $lobbyConfig;
-    public function onEnable(){
+    public function onEnable():void {
       $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->saveResource("lobbies.yml");
         $this->lobbyConfig = new Config($this->getDataFolder() . "lobbies.yml", Config::YAML);
-        if ($this->getLimit() < 0 || is_null($this->getMsg()) || count($this->getLobbies()) === 0 || is_null($this->getFallback()) || !Server::getInstance()->isLevelGenerated($this->getFallback())){
+        if ($this->getLimit() < 0 || is_null($this->getMsg()) || count($this->getLobbies()) === 0 || is_null($this->getFallback()) || !Server::getInstance()->getWorldManager()->isWorldGenerated($this->getFallback())){
           $this->error();
 		      return;
         }
         
         $this->getScheduler()->scheduleRepeatingTask(new ClosureTask(
             function(int $currentTick): void{
-                $this->getServer()->loadLevel($this->getFallback());
-                foreach ($this->getServer()->getLevelByName($this->getFallback())->getPlayers() as $player) {
+                $this->getServer()->getWorldManager()->loadWorld($this->getFallback());
+                foreach ($this->getServer()->getWorldManager()->getWorldByName($this->getFallback())->getPlayers() as $player) {
                     $this->getServer()->dispatchCommand($player, "lobby");
                 }
             }
@@ -58,19 +58,19 @@ class Main extends PluginBase implements Listener{
         }
         $lobbies = $this->getLobbies();
         $fallback = $this->getFallback();
-        $this->getServer()->loadLevel($fallback);
+        $this->getServer()->getWorldManager()->loadWorld($fallback);
         foreach ($lobbies as $lobby) {
-		      if(!Server::getInstance()->isLevelGenerated($lobby)){
+		      if(!Server::getInstance()->getWorldManager()->isWorldGenerated($lobby)){
             $this->error();
 			      return true;          
           }
-          $this->getServer()->loadLevel($lobby);
-          if (count($this->getServer()->getLevelByName($lobby)->getPlayers()) < $this->getLimit()){
-            $sender->teleport($this->getServer()->getLevelByName($lobby)->getSafeSpawn());
+          $this->getServer()->getWorldManager()->loadWorld($lobby);
+          if (count($this->getServer()->getWorldManager()->getWorldByName($lobby)->getPlayers()) < $this->getLimit()){
+            $sender->teleport($this->getServer()->getWorldManager()->getWorldByName($lobby)->getSafeSpawn());
             return true;
           }
         }
-        $sender->teleport($this->getServer()->getLevelByName($fallback)->getSafeSpawn());
+        $sender->teleport($this->getServer()->getWorldManager()->getWorldByName($fallback)->getSafeSpawn());
         $sender->sendMessage($this->getMsg());
         return true;
     }
