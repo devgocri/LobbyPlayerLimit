@@ -24,7 +24,31 @@ If you didn’t know, a lobby is where people spawn and they can join minigames,
 
 ## How to setup?
 
-You can find setup notes [here](https://poggit.pmmp.io/p/LobbyPlayerLimit#rdesc-section-how-to-setup).
+Drop the plugin into your server and start-and-stop it. Navigate to your `plugin_data` folder and find `lobbies.yml`.
+
+Now, add the names of the worlds of your lobbies after `lobbies:`. You can add as many as you want as long as they follow the `- "Example"` format. Make sure they have the same amount of indentation!
+
+Example:
+
+```yaml
+lobbies:
+ - "world"
+ - "worldone"
+```
+
+Then, add your fallback lobby world after `fallback:"`. Check the comments in the config if you don’t know what a fallback lobby is.
+
+Example:
+
+```yaml
+fallback: "fallbackworld"
+```
+
+After that, replace `limit: 0` with `limit: AMOUNT OF PLAYERS PER LOBBY`.
+
+Add your “lobby full” message after `lobbyfullmsg:`.
+
+Now, restart the server and you're all done!
 
 ## Make yourself immune to the system
 Whenever you join the server, you will immediately be joined to a lobby with an amount of players less than your limit. If you want to disable this, you have to remove the `lobbyplayerlimit.lobby` permission from yourself. 
