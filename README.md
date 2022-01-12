@@ -76,4 +76,4 @@ Feel free to tell me [here](https://github.com/BestCodrEver/LobbyPlayerLimit/iss
 
 <hr/>
 
-<p align="center">This plugin was made with ❤️ by <a href="https://github.com/BestCodrEver">BestCodrEver</a> for Pumpedpixel</p>
+<p align="center">This plugin was made with ❤️ by <a href="https://github.com/BestCodrEver">BestCodrEver</a> for <a href="https://github.com/PumpedPixel">Pumpedpixel</a></p>
